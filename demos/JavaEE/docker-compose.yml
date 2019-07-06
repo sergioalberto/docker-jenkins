@@ -11,10 +11,6 @@ services:
   app:
     build: ./webapp
     image: arungupta/docker-jenkins-app
-    environment:
-      - DB_URI=db
-    depends_on:
-      - db
   unit:
     image: maven
     volumes:
