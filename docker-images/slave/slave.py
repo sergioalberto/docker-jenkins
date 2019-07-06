@@ -5,10 +5,14 @@ import sys
 import urllib
 import subprocess
 import shutil
+import requests
+import time
 
 slave_jar = '/var/lib/jenkins/slave.jar'
 slave_name = os.environ['SLAVE_NAME'] if os.environ['SLAVE_NAME'] != '' else 'docker-slave-' + os.environ['HOSTNAME']
 jnlp_url = os.environ['JENKINS_URL'] + '/computer/' + slave_name + '/slave-agent.jnlp'
+slave_jar_url = os.environ['JENKINS_URL'] + '/jnlpJars/slave.jar'
+print(slave_jar_url)
 process = None
 
 def clean_dir(dir):
@@ -50,6 +54,17 @@ def signal_handler(sig, frame):
 
 signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
+
+def master_ready(url):
+    try:
+        r = requests.head(url, verify=False, timeout=None)
+        return r.status_code == requests.codes.ok
+    except:
+        return False
+
+while not master_ready(slave_jar_url):
+    print("Master not ready yet, sleeping for 10sec!")
+    time.sleep(10)
 
 slave_download(slave_jar)
 print 'Downloaded Jenkins slave jar.'
