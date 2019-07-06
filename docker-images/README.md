@@ -10,5 +10,7 @@ Process to build/run your CI environment.
 ### Run
 ``docker-compose up -d ``
 
+Now, go to http://localhost:8080/ (admin/admin)
+
 ### Stop
 ``docker-compose down -v``
