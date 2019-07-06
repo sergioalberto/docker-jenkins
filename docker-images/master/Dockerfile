@@ -2,7 +2,7 @@
 FROM jenkins/jenkins:latest
  
 # Installing the plugins we need using the in-built install-plugins.sh script
-RUN /usr/local/bin/install-plugins.sh git mstest matrix-auth workflow-aggregator docker-workflow blueocean credentials-binding
+RUN /usr/local/bin/install-plugins.sh git mstest matrix-auth workflow-aggregator docker-workflow blueocean credentials-binding cucumber-reports maven
  
 # Setting up environment variables for Jenkins admin user
 ENV JENKINS_USER admin

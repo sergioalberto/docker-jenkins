@@ -1,27 +1,28 @@
-node {
+node('docker') {
   checkout scm
   env.PATH = "${tool 'Maven3'}/bin:${env.PATH}"
+
   stage('Package') {
-    dir('webapp') {
+    dir('demos/JavaEE/webapp') {
       sh 'mvn clean package -DskipTests'
     }
   }
 
   stage('Create Docker Image') {
-    dir('webapp') {
-      docker.build("arungupta/docker-jenkins-pipeline:${env.BUILD_NUMBER}")
+    dir('demos/JavaEE') {
+      // Start database container here
+      sh 'docker-compose up --force --build -d db'
+      // Build app
+      sh 'docker-compose build app'
     }
   }
 
   stage ('Run Application') {
     try {
-      // Start database container here
-      // sh 'docker run -d --name db -p 8091-8093:8091-8093 -p 11210:11210 arungupta/oreilly-couchbase:latest'
-
-      // Run application using Docker image
-      sh "DB=`docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' db`"
-      sh "docker run -e DB_URI=$DB arungupta/docker-jenkins-pipeline:${env.BUILD_NUMBER}"
-
+      dir('demos/JavaEE') {
+        // Run add
+        sh 'docker-compose run -e DB_URI=`docker inspect --format="{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" db` app'
+      }
       // Run tests using Maven
       //dir ('webapp') {
       //  sh 'mvn exec:java -DskipTests'
@@ -36,14 +37,17 @@ node {
 
   stage('Run Tests') {
     try {
-      dir('webapp') {
+      dir('demos/JavaEE/webapp') {
         sh "mvn test"
-        docker.build("arungupta/docker-jenkins-pipeline:${env.BUILD_NUMBER}").push()
+        // docker.build("arungupta/docker-jenkins-pipeline:${env.BUILD_NUMBER}").push()
       }
     } catch (error) {
 
     } finally {
       junit '**/target/surefire-reports/*.xml'
+      dir('demos/JavaEE') {
+        sh 'docker-compose down -v'
+      }
     }
   }
 }
