@@ -1,0 +1,33 @@
+version: "3"
+services:
+  selenium-hub:
+    image: selenium/hub:3.141.59
+    container_name: selenium-hub
+    environment:
+      - GRID_BROWSER_TIMEOUT=120000
+      - GRID_TIMEOUT=120000
+      - VIRTUAL_HOST=selenium.hub.docker
+    ports:
+      - "4444:4444"
+  chrome:
+    image: selenium/node-chrome-debug:3.141.59
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - HUB_PORT_4444_TCP_ADDR=selenium-hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    ports:
+      - "5900:5900"
+  firefox:
+    image: selenium/node-chrome-debug:3.141.59
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - HUB_PORT_4444_TCP_ADDR=selenium-hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    ports:
+      - "5901:5900"
