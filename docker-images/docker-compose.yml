@@ -6,6 +6,8 @@ services:
     ports:
       - '8080:8080'
       - '50000:50000'
+    volumes:
+      - jenkins_data:/var/jenkins_home
   jenkins-slave:
     image: jenkins-slave
     container_name: jenkins-slave
@@ -17,3 +19,7 @@ services:
       - /home/jenkins:/home/jenkins # Avoid mysql volume mount issue
     depends_on:
       - jenkins
+volumes:
+  jenkins_data:
+    driver: local
+    external: false
