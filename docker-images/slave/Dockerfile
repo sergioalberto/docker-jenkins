@@ -27,7 +27,7 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 581
 RUN echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update && apt-get install -y docker-ce --allow-unauthenticated
 
-RUN apt-get update && apt-get install -y curl python python-pip git
+RUN apt-get update && apt-get install -y curl python python-pip git maven
 RUN easy_install jenkins-webapi
  
 # Get docker-compose in the agent container
@@ -50,5 +50,5 @@ ENV SLAVE_EXECUTORS "2"
 ENV SLAVE_LABELS "docker"
 ENV SLAVE_WORING_DIR ""
 ENV CLEAN_WORKING_DIR "true"
- 
+
 CMD [ "python", "-u", "/var/lib/jenkins/slave.py" ]
