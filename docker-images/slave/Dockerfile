@@ -35,6 +35,12 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-co
 RUN mkdir -p /home/jenkins
 RUN mkdir -p /var/lib/jenkins
 
+# Update the package list and install the Cloud SDK
+RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && \
+    apt-get update -y && \
+    apt-get install google-cloud-sdk -y
+
 # Start-up script to attach the slave to the master
 ADD slave.py /var/lib/jenkins/slave.py
  
