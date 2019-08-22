@@ -8,8 +8,13 @@ Process to build/run your CI environment.
 ``cd slave && docker build -t jenkins-slave .``
 
 ### Run Jenkins
-``docker-compose up -d``
-``docker-compose -f docker-compose-gcloud.yml up -d``
+```shell script
+docker-compose up -d
+```
+or
+```shell script
+docker-compose -f docker-compose-gcloud.yml up -d
+```
 
 Now, go to [http://localhost:8080/](http://localhost:8080/) (admin/admin)
 
