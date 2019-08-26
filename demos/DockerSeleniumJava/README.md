@@ -13,6 +13,7 @@ $ git clone https://github.com/sergioalberto/docker-jenkins.git
   - Create the docker images locally
 There is a one time run of 
 ````bash
+$ cd docker-jenkins/demos/DockerSeleniumJava
 $ ./docker-images-build.sh
 ```` 
 which will create the docker images locally. Normally you'd have them pushed to a repository, but I wanted to show there are no "hidden tricks", or you can use them as example to build your own. So instead we use the script to build locally the required images.
@@ -24,13 +25,9 @@ $ ./restart.sh
 ````
 
 which basically does **docker-compose run uitests mvn clean verify**
- 
 
 This would execute the **Cucumber tests** and produce the **Serenity reports** which can be accessed at **./target/site/index.html**
 
-
 [![BDD preview](http://balamaci.ro/content/images/2015/10/bdd_preview.png)](http://balamaci.ro/static/serenity/index.html)
-
-
 
 We included **pippo-demo.war** -the application we run our tests against- on the repo to have a single command to run the job. Normally you'd have it provided by another build job that would trigger the testing job. 

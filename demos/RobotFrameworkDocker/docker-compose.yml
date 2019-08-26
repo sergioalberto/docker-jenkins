@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  robot:
+    image: sergiogq/robot-framework
+    build: .
+    container_name: robot-framework
+    network_mode: host
+    shm_size: 256M
+    security_opt: ["seccomp:unconfined"]
+    volumes:
+      - ./output:/output
+      - ./suites:/suites
+      - ./scripts:/scripts
+      - ./reports:/reports
+    environment:
+      - USERNAME=SergioGQ
