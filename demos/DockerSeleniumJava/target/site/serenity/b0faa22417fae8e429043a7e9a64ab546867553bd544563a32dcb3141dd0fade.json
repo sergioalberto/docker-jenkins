@@ -1,0 +1,129 @@
+{
+  "name": "Entering valid credentials I am able to login and see \u0027Contacts\u0027 page",
+  "testSteps": [
+    {
+      "number": 1,
+      "description": "Given I try to access the \u0027Contacts\u0027 page",
+      "duration": 404,
+      "startTime": 1566826726021,
+      "screenshots": [
+        {
+          "screenshot": "650c8273595a3e449739efd0dbc74faa_NONE1024.png"
+        },
+        {
+          "screenshot": "c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS"
+    },
+    {
+      "number": 2,
+      "description": "And I see the \u0027Login\u0027 page",
+      "duration": 879,
+      "startTime": 1566826726926,
+      "screenshots": [
+        {
+          "screenshot": "c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS",
+      "children": [
+        {
+          "number": 3,
+          "description": "Is login page",
+          "duration": 179,
+          "startTime": 1566826727019,
+          "screenshots": [
+            {
+              "screenshot": "c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"
+            }
+          ],
+          "result": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "description": "When I login with user \u0027admin\u0027 and with password \u0027admin\u0027",
+      "duration": 2436,
+      "startTime": 1566826728308,
+      "screenshots": [
+        {
+          "screenshot": "c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS",
+      "children": [
+        {
+          "number": 5,
+          "description": "Enter username and password: \u003cspan class\u003d\u0027step-parameter\u0027\u003eadmin, admin\u003c/span\u003e",
+          "duration": 701,
+          "startTime": 1566826728409,
+          "screenshots": [
+            {
+              "screenshot": "585197cb2d38dcf52dc9137bd0e190ee_NONE1024.png"
+            }
+          ],
+          "result": "SUCCESS"
+        },
+        {
+          "number": 6,
+          "description": "Click on submit",
+          "duration": 505,
+          "startTime": 1566826729611,
+          "screenshots": [
+            {
+              "screenshot": "c5b8c7e90e3d309997c65af6f3838008_NONE1024.png"
+            },
+            {
+              "screenshot": "682a6a785e9583f5fbe5dbdc71240f4c_NONE1024.png"
+            }
+          ],
+          "result": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "description": "Then I should see the \u0027Contacts\u0027 page",
+      "duration": 227,
+      "startTime": 1566826731245,
+      "screenshots": [
+        {
+          "screenshot": "682a6a785e9583f5fbe5dbdc71240f4c_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS"
+    }
+  ],
+  "userStory": {
+    "id": "login-functionality",
+    "storyName": "Login functionality",
+    "path": "login/login.feature",
+    "narrative": "Unauthorized users first need to login into the application.\nUsers who enter right credentials should be able to login into the application.\nUsers who enter wrong credentials are shown an error message.",
+    "type": "feature"
+  },
+  "title": "Entering valid credentials I am able to login and see \u0027Contacts\u0027 page",
+  "description": "",
+  "backgroundTitle": "",
+  "backgroundDescription": "",
+  "tags": [
+    {
+      "name": "ui",
+      "type": "tag"
+    },
+    {
+      "name": "Login/Login functionality",
+      "type": "feature"
+    },
+    {
+      "name": "Login",
+      "type": "epic"
+    }
+  ],
+  "startTime": 1566826724654,
+  "duration": 7318,
+  "driver": "firefox",
+  "manual": false,
+  "result": "SUCCESS"
+}

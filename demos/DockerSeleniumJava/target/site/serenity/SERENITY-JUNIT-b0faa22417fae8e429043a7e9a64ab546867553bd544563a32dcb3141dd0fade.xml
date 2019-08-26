@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Login functionality" skipped="0" tests="2" time="13.91" timestamp="2019-08-238 01:38:44"><testcase name="Entering valid credentials I am able to login and see 'Contacts' page"/><testcase name="Entering invalid credentials I am warned that login has failed"/></testsuite>

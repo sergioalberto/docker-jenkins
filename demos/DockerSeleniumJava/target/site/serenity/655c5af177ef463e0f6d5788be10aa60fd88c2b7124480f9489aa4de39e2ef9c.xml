@@ -1,0 +1,160 @@
+<acceptance-test-run title="I can add a new contact" name="I can add a new contact" description="" steps="16" successful="16" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="19396" timestamp="2019-08-26T13:38:24.833Z">
+  <user-story id="create-contacts-functionality" name="Create Contacts functionality" path="contacts/contacts.feature"/>
+  <tags>
+    <tag name="Contacts" type="epic"/>
+    <tag name="Contacts/Create contacts functionality" type="feature"/>
+    <tag name="Create Contacts functionality" type="feature"/>
+    <tag name="ui" type="tag"/>
+  </tags>
+  <examples>
+    <datasets>
+      <dataset startRow="0" rowCount="0" name="" description=""/>
+    </datasets>
+    <headers>
+      <header>name</header>
+      <header>address</header>
+      <header>phone</header>
+    </headers>
+    <rows>
+      <row result="SUCCESS">
+        <value>Serban</value>
+        <value>Str. Some street nr. 2</value>
+        <value>+4077235653</value>
+      </row>
+      <row result="SUCCESS">
+        <value>Decebal</value>
+        <value>Str. Burebista nr. 3</value>
+        <value>+4077235655</value>
+      </row>
+    </rows>
+  </examples>
+  <test-group name="[1] {name=Serban, address=Str. Some street nr. 2, phone=+4077235653}" result="SUCCESS">
+    <screenshots>
+      <screenshot image="5a65f36ab2c93d43dd42e7e4fa13112f_NONE1024.png"/>
+    </screenshots>
+    <test-group name="Given I am logged in as admin" result="SUCCESS">
+      <screenshots>
+        <screenshot image="5a65f36ab2c93d43dd42e7e4fa13112f_NONE1024.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="361">
+        <screenshots>
+          <screenshot image="5a65f36ab2c93d43dd42e7e4fa13112f_NONE1024.png"/>
+          <screenshot image="c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"/>
+        </screenshots>
+        <description>Open login page</description>
+      </test-step>
+      <test-step result="SUCCESS" duration="637">
+        <screenshots>
+          <screenshot image="c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"/>
+          <screenshot image="c5b8c7e90e3d309997c65af6f3838008_NONE1024.png"/>
+        </screenshots>
+        <description>Enter username and password: &lt;span class=&apos;step-parameter&apos;&gt;admin, admin&lt;/span&gt;</description>
+      </test-step>
+      <test-step result="SUCCESS" duration="486">
+        <screenshots>
+          <screenshot image="c5b8c7e90e3d309997c65af6f3838008_NONE1024.png"/>
+          <screenshot image="34b36d5abdac3d226d2a5f421c826b8b_NONE1024.png"/>
+        </screenshots>
+        <description>Click on submit</description>
+      </test-step>
+    </test-group>
+    <test-step result="SUCCESS" duration="403">
+      <screenshots>
+        <screenshot image="34b36d5abdac3d226d2a5f421c826b8b_NONE1024.png"/>
+      </screenshots>
+      <description>And I open the &apos;Contacts&apos; page</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="471">
+      <screenshots>
+        <screenshot image="34b36d5abdac3d226d2a5f421c826b8b_NONE1024.png"/>
+        <screenshot image="b46cfae256761ebcc29e513a099edb7c_NONE1024.png"/>
+      </screenshots>
+      <description>When I click on &apos;Add&apos;</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="855">
+      <screenshots>
+        <screenshot image="b46cfae256761ebcc29e513a099edb7c_NONE1024.png"/>
+        <screenshot image="392727719333964ad0572d38b17ac1b9_NONE1024.png"/>
+      </screenshots>
+      <description>And I enter &apos;Serban&apos; &apos;+4077235653&apos; and &apos;Str. Some street nr. 2&apos; in the Edit panel</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="411">
+      <screenshots>
+        <screenshot image="392727719333964ad0572d38b17ac1b9_NONE1024.png"/>
+        <screenshot image="fba30ce9fcc6e44e4519f7c45353fdd0_NONE1024.png"/>
+      </screenshots>
+      <description>And I click &apos;Submit&apos; button</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="425">
+      <screenshots>
+        <screenshot image="624d45995b340dc8f0d18ad507d0a2bd_NONE1024.png"/>
+      </screenshots>
+      <description>Then I should see &apos;Serban&apos; in the list of contacts</description>
+    </test-step>
+  </test-group>
+  <test-group name="[1] {name=Decebal, address=Str. Burebista nr. 3, phone=+4077235655}" result="SUCCESS">
+    <screenshots>
+      <screenshot image="624d45995b340dc8f0d18ad507d0a2bd_NONE1024.png"/>
+    </screenshots>
+    <test-group name="Given I am logged in as admin" result="SUCCESS">
+      <screenshots>
+        <screenshot image="624d45995b340dc8f0d18ad507d0a2bd_NONE1024.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="378">
+        <screenshots>
+          <screenshot image="624d45995b340dc8f0d18ad507d0a2bd_NONE1024.png"/>
+          <screenshot image="c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"/>
+        </screenshots>
+        <description>Open login page</description>
+      </test-step>
+      <test-step result="SUCCESS" duration="576">
+        <screenshots>
+          <screenshot image="c7ae9132052a9f9cb6b7e51362b4b502_NONE1024.png"/>
+          <screenshot image="246faeb87d73542afcee289cd38b3625_NONE1024.png"/>
+        </screenshots>
+        <description>Enter username and password: &lt;span class=&apos;step-parameter&apos;&gt;admin, admin&lt;/span&gt;</description>
+      </test-step>
+      <test-step result="SUCCESS" duration="550">
+        <screenshots>
+          <screenshot image="c5b8c7e90e3d309997c65af6f3838008_NONE1024.png"/>
+          <screenshot image="d3d3094659803b2dc35c437a27e21fec_NONE1024.png"/>
+        </screenshots>
+        <description>Click on submit</description>
+      </test-step>
+    </test-group>
+    <test-step result="SUCCESS" duration="403">
+      <screenshots>
+        <screenshot image="d3d3094659803b2dc35c437a27e21fec_NONE1024.png"/>
+        <screenshot image="624d45995b340dc8f0d18ad507d0a2bd_NONE1024.png"/>
+      </screenshots>
+      <description>And I open the &apos;Contacts&apos; page</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="494">
+      <screenshots>
+        <screenshot image="624d45995b340dc8f0d18ad507d0a2bd_NONE1024.png"/>
+        <screenshot image="b46cfae256761ebcc29e513a099edb7c_NONE1024.png"/>
+      </screenshots>
+      <description>When I click on &apos;Add&apos;</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="1007">
+      <screenshots>
+        <screenshot image="b46cfae256761ebcc29e513a099edb7c_NONE1024.png"/>
+        <screenshot image="8800068a976e507f814cf23282018437_NONE1024.png"/>
+      </screenshots>
+      <description>And I enter &apos;Decebal&apos; &apos;+4077235655&apos; and &apos;Str. Burebista nr. 3&apos; in the Edit panel</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="512">
+      <screenshots>
+        <screenshot image="8800068a976e507f814cf23282018437_NONE1024.png"/>
+        <screenshot image="682a6a785e9583f5fbe5dbdc71240f4c_NONE1024.png"/>
+      </screenshots>
+      <description>And I click &apos;Submit&apos; button</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="385">
+      <screenshots>
+        <screenshot image="682a6a785e9583f5fbe5dbdc71240f4c_NONE1024.png"/>
+      </screenshots>
+      <description>Then I should see &apos;Decebal&apos; in the list of contacts</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

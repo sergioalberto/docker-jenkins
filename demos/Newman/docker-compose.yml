@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  newman:
+    image: postman/newman_ubuntu1404:3.8.2
+    command: run /tmp/JenkinsTest.postman_collection.json
+    volumes:
+      - '.:/tmp'

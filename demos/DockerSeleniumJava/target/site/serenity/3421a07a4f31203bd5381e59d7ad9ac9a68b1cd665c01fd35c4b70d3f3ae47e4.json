@@ -1,0 +1,143 @@
+{
+  "name": "Entering invalid credentials I am warned that login has failed",
+  "testSteps": [
+    {
+      "number": 1,
+      "description": "Given I try to access the \u0027Contacts\u0027 page",
+      "duration": 368,
+      "startTime": 1566826732287,
+      "screenshots": [
+        {
+          "screenshot": "682a6a785e9583f5fbe5dbdc71240f4c_NONE1024.png"
+        },
+        {
+          "screenshot": "2b47f742d83cc42aa1f7863566964731_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS"
+    },
+    {
+      "number": 2,
+      "description": "And I see the \u0027Login\u0027 page",
+      "duration": 940,
+      "startTime": 1566826733155,
+      "screenshots": [
+        {
+          "screenshot": "2b47f742d83cc42aa1f7863566964731_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS",
+      "children": [
+        {
+          "number": 3,
+          "description": "Is login page",
+          "duration": 172,
+          "startTime": 1566826733257,
+          "screenshots": [
+            {
+              "screenshot": "2b47f742d83cc42aa1f7863566964731_NONE1024.png"
+            }
+          ],
+          "result": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "description": "When I login with user \u0027hacker\u0027 and with password \u0027\u0027",
+      "duration": 2360,
+      "startTime": 1566826734598,
+      "screenshots": [
+        {
+          "screenshot": "2b47f742d83cc42aa1f7863566964731_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS",
+      "children": [
+        {
+          "number": 5,
+          "description": "Enter username and password: \u003cspan class\u003d\u0027step-parameter\u0027\u003ehacker, \u003c/span\u003e",
+          "duration": 663,
+          "startTime": 1566826734709,
+          "screenshots": [
+            {
+              "screenshot": "ad406dba0b0e76821a3284dd4e0820a1_NONE1024.png"
+            }
+          ],
+          "result": "SUCCESS"
+        },
+        {
+          "number": 6,
+          "description": "Click on submit",
+          "duration": 470,
+          "startTime": 1566826735873,
+          "screenshots": [
+            {
+              "screenshot": "bcedbdb938aabd2671b34a7d702902f4_NONE1024.png"
+            },
+            {
+              "screenshot": "56abe86f0dc00d8783ef3fe6f194b400_NONE1024.png"
+            }
+          ],
+          "result": "SUCCESS"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "description": "Then I should see a failed login warning message with key \u0027login.warnLoginFailed\u0027",
+      "duration": 890,
+      "startTime": 1566826737459,
+      "screenshots": [
+        {
+          "screenshot": "56abe86f0dc00d8783ef3fe6f194b400_NONE1024.png"
+        }
+      ],
+      "result": "SUCCESS",
+      "children": [
+        {
+          "number": 8,
+          "description": "Warn message with key is shown: \u003cspan class\u003d\u0027step-parameter\u0027\u003elogin.warnLoginFailed\u003c/span\u003e",
+          "duration": 175,
+          "startTime": 1566826737569,
+          "screenshots": [
+            {
+              "screenshot": "56abe86f0dc00d8783ef3fe6f194b400_NONE1024.png"
+            }
+          ],
+          "result": "SUCCESS"
+        }
+      ]
+    }
+  ],
+  "userStory": {
+    "id": "login-functionality",
+    "storyName": "Login functionality",
+    "path": "login/login.feature",
+    "narrative": "Unauthorized users first need to login into the application.\nUsers who enter right credentials should be able to login into the application.\nUsers who enter wrong credentials are shown an error message.",
+    "type": "feature"
+  },
+  "title": "Entering invalid credentials I am warned that login has failed",
+  "description": "",
+  "backgroundTitle": "",
+  "backgroundDescription": "",
+  "tags": [
+    {
+      "name": "ui",
+      "type": "tag"
+    },
+    {
+      "name": "Login/Login functionality",
+      "type": "feature"
+    },
+    {
+      "name": "Login",
+      "type": "epic"
+    }
+  ],
+  "startTime": 1566826732260,
+  "duration": 6589,
+  "driver": "firefox",
+  "manual": false,
+  "result": "SUCCESS"
+}

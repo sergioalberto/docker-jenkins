@@ -19,7 +19,15 @@ or
 ```shell script
 docker run -v "$(pwd)"/demos/Newman/:/tmp -t postman/newman_ubuntu1404:3.8.2 run /tmp/JenkinsTest.postman_collection.json
 ```
+or
+```shell script
+docker-compose up
+```
 
+### Stop Docker image
+```shell script
+docker-compose down
+
+```
 ###### Source:
 - https://learning.getpostman.com/docs/postman/collection_runs/integration_with_jenkins/
-- 

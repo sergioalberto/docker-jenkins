@@ -1,0 +1,38 @@
+tomcat:
+  image: sergiogq/tomcat7-jdk8
+  ports:
+    - 8080:8080
+  volumes:
+    - ./out/tomcat:/opt/tomcat/logs
+
+hub:
+  image: selenium/hub:2.48.1
+  expose:
+    - 4444
+  links:
+    - tomcat
+
+nodeff:
+  image: selenium/node-firefox-debug:2.48.1
+  environment: &SELENIUM_NODE_ENV
+    # this is a necessary workaround due to a known bug
+    # https://github.com/SeleniumHQ/docker-selenium/issues/133
+    HUB_PORT_4444_TCP_ADDR: hub
+    HUB_PORT_4444_TCP_PORT: 4444
+  ports:
+    - "5901:5900"
+  volumes:
+    - ./out/ff/e2e/uploads:/e2e/uploads
+  links:
+    - hub
+    - tomcat
+
+uitests:
+  image: sergiogq/ui-tests
+  volumes:
+    - .:/usr/src/app
+    - ~/.m2:/root/.m2
+  links:
+    - tomcat
+    - hub
+    - nodeff
