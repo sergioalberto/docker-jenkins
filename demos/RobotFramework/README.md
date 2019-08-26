@@ -73,9 +73,5 @@ robotframework-excellibrary
 
 More details here http://navinet.github.io/robotframework-excellibrary/ExcelLibrary-KeywordDocumentation.html
 
-
-**ENJOY**
-
-
-*For any requests or changes please open issues or create pull requests :)*
-
+###### Source
+https://medium.com/@ypasmk/robot-framework-with-docker-in-less-than-10-minutes-7b86df769c22
