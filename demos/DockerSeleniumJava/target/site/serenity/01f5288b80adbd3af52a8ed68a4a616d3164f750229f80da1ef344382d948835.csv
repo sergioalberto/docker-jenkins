@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Login functionality","Entering invalid credentials I am warned that login has failed","SUCCESS","2019-08-26T13:38:52.260Z","0.0","6.59"
-"Login functionality","Entering valid credentials I am able to login and see 'Contacts' page","SUCCESS","2019-08-26T13:38:44.654Z","0.0","7.32"
-"Create Contacts functionality","I can add a new contact","SUCCESS","2019-08-26T13:38:24.833Z","0.0","19.4"

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: ro.fortsoft.pippo.demo.bdd.runner.PippoCrudDemoRunner
--------------------------------------------------------------------------------
-Tests run: 32, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 46.308 sec - in ro.fortsoft.pippo.demo.bdd.runner.PippoCrudDemoRunner
