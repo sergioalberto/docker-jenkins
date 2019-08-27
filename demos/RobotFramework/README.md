@@ -10,7 +10,7 @@ git clone https://github.com/sergioalberto/docker-jenkins.git
 
 Build the image:
 ```shell script
-cd docker-jenkins/demos/RobotFrameworkDocker
+cd docker-jenkins/demos/RobotFramework
 docker-compose build
 ```
     
@@ -41,7 +41,6 @@ Example (suites/virtual_display.robot):
 
     Start Virtual Display    1920    1080
     
-
 Selenium2Library
 ----------------
 
@@ -65,13 +64,12 @@ Example:
 robotframework-sshlibrary
 -------------------------
 
-More details here http://robotframework.org/SSHLibrary/latest/SSHLibrary.html
-
+More details here: http://robotframework.org/SSHLibrary/latest/SSHLibrary.html
 
 robotframework-excellibrary
 ---------------------------
 
-More details here http://navinet.github.io/robotframework-excellibrary/ExcelLibrary-KeywordDocumentation.html
+More details here: http://navinet.github.io/robotframework-excellibrary/ExcelLibrary-KeywordDocumentation.html
 
 ###### Source
 https://medium.com/@ypasmk/robot-framework-with-docker-in-less-than-10-minutes-7b86df769c22

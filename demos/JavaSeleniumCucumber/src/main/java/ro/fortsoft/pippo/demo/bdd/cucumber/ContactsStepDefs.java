@@ -7,7 +7,7 @@ import net.thucydides.core.annotations.Steps;
 import ro.fortsoft.pippo.demo.bdd.serenity.ContactsSteps;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 public class ContactsStepDefs {
 
@@ -38,7 +38,6 @@ public class ContactsStepDefs {
     public void is_contacts_page() {
         contactsSteps.isContactsPage();
     }
-
 
     @Then("^I should see '(.*)' in the list of contacts$")
     public void contact_name_is_present_in_contacts_table(String name) {

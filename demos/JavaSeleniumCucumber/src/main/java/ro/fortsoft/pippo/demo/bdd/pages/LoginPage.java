@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import ro.fortsoft.pippo.demo.bdd.config.Locators;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 @DefaultUrl("http://localhost/login")
 public class LoginPage extends PageObject {

@@ -1,7 +1,7 @@
 tomcat:
   image: sergiogq/tomcat7-jdk8
-  ports:
-    - 8080:8080
+  expose:
+    - 8080
   volumes:
     - ./out/tomcat:/opt/tomcat/logs
 
@@ -12,7 +12,7 @@ hub:
   links:
     - tomcat
 
-nodeff:
+firefox:
   image: selenium/node-firefox-debug:2.48.1
   environment: &SELENIUM_NODE_ENV
     # this is a necessary workaround due to a known bug
@@ -35,4 +35,4 @@ uitests:
   links:
     - tomcat
     - hub
-    - nodeff
+    - firefox

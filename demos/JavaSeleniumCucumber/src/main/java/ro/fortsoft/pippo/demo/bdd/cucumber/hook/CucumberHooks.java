@@ -5,7 +5,7 @@ import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.pages.Pages;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 public class CucumberHooks {
 
@@ -23,7 +23,5 @@ public class CucumberHooks {
         pages.getDriver().manage().deleteAllCookies();
         pages.getDriver().manage().window().maximize();
     }
-
-
 
 }

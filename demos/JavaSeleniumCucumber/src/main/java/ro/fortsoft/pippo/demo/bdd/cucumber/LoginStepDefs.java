@@ -8,7 +8,7 @@ import ro.fortsoft.pippo.demo.bdd.serenity.ContactsSteps;
 import ro.fortsoft.pippo.demo.bdd.serenity.LoginSteps;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 public class LoginStepDefs {
 
@@ -32,7 +32,6 @@ public class LoginStepDefs {
     public void failed_login_warn_message_is_shown(String key) {
         loginSteps.warnMessageWithKeyIsShown(key);
     }
-
 
     @Given("^I am logged in as admin$")
     public void login_admin_user() {

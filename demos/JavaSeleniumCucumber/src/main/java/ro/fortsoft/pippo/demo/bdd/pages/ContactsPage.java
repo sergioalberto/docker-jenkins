@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import ro.fortsoft.pippo.demo.bdd.config.Locators;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 @DefaultUrl("http://localhost/contacts")
 public class ContactsPage extends PageObject {
@@ -36,6 +36,5 @@ public class ContactsPage extends PageObject {
         WebElement tblContacts = find(By.id(Locators.getValue("contacts.table.id")));
         return tblContacts.getText();
     }
-
 
 }

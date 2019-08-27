@@ -8,7 +8,7 @@ import ro.fortsoft.pippo.demo.bdd.pages.LoginPage;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 public class LoginSteps extends ScenarioSteps {
 

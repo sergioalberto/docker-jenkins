@@ -6,7 +6,7 @@ import ro.fortsoft.pippo.demo.bdd.pages.ContactsPage;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 public class ContactsSteps extends ScenarioSteps {
 

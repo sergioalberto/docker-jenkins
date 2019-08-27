@@ -13,7 +13,7 @@ $ git clone https://github.com/sergioalberto/docker-jenkins.git
   - Create the docker images locally
 There is a one time run of 
 ````bash
-$ cd docker-jenkins/demos/DockerSeleniumJava
+$ cd docker-jenkins/demos/JavaSeleniumCucumber
 $ ./docker-images-build.sh
 ```` 
 which will create the docker images locally. Normally you'd have them pushed to a repository, but I wanted to show there are no "hidden tricks", or you can use them as example to build your own. So instead we use the script to build locally the required images.

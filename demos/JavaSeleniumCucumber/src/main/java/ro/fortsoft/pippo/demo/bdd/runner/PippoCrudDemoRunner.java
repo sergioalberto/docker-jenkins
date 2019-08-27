@@ -5,14 +5,11 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         format = { "pretty", "html:target/pippo", "json:target/cucumber.json" },
         features = {"src/main/resources/features/"},
         glue = "ro.fortsoft.pippo.demo.bdd.cucumber")
-public class PippoCrudDemoRunner {
-
-
-}
+public class PippoCrudDemoRunner {}

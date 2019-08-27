@@ -21,4 +21,3 @@ Feature: Create Contacts functionality
         | name          | address                  | phone        |
         | Serban        | Str. Some street nr. 2   | +4077235653  |
         | Decebal       | Str. Burebista nr. 3     | +4077235655  |
-

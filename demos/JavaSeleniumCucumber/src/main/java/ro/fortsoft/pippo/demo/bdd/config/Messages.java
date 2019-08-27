@@ -4,7 +4,7 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
 /**
- * @author Serban Balamaci
+ * @author Sergio GQ
  */
 public class Messages {
 

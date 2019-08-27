@@ -4,7 +4,7 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
 /**
- * @author sbalamaci
+ * @author Sergio GQ
  */
 public class Locators {
 
