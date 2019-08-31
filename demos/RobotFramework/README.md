@@ -22,6 +22,11 @@ or
 ```shell script
 ./run_tests.sh
 ```
+or
+```
+pip install -r requirements.txt
+python -m robot --console verbose --outputdir reports/ test_cases/
+```
 
 Stop docker:
 ```shell script

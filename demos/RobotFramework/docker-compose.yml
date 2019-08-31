@@ -10,7 +10,8 @@ services:
     security_opt: ["seccomp:unconfined"]
     volumes:
       - ./output:/output
-      - ./suites:/suites
+      - ./test_cases:/test_cases
+      - ./resources:/resources
       - ./scripts:/scripts
       - ./reports:/reports
     environment:
