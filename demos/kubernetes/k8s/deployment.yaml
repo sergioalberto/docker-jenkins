@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-hello-go-deployment
+  labels:
+    app: api-hello-go
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: api-hello-go
+  template:
+    metadata:
+      labels:
+        app: api-hello-go
+    spec:
+      containers:
+      - name: api-hello-go
+        image: sergiogq/api-hello-go
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-hello-g0-pod
+  labels:
+    app: api-hello-go
+spec:
+  containers:
+  - name: api-hello-go
+    image: sergiogq/api-hello-go
+    ports:
+    - containerPort: 8080
