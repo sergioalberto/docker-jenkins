@@ -1,21 +1,44 @@
-node('docker') {
-    stage ('Checkout'){
-        checkout scm
+#! groovy
+
+pipeline {
+
+    options {
+        ansiColor('xterm')
+        timeout(time: 10, unit: 'MINUTES')
     }
-    stage('Build') {
-        sh """
-            mvn --version
-        """
+
+    agent {
+        label 'docker'
     }
-    stage('Deploy') {
-        sh """
-            ls
-        """
+
+    parameters {
+        choice(name: 'JSON_SCRIPT', choices: ['smoke.json','regression.json'], description: 'Define tests to run.')
     }
-    stage('Test') {
-        sh """
-            pwd
-        """
-        echo 'Testing ...'
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('API Tests') {
+            steps {
+                script {
+                    sh """
+                        pwd
+                    """
+                    echo 'Testing ...'
+                }
+            }
+        }
+
+    }
+
+    post {
+        always {
+            echo 'Cleaning ...'
+        }
     }
 }
