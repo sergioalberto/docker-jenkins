@@ -1,0 +1,15 @@
+home_page:
+  home: id:masthead
+  search_field: class:search-field
+
+results_page:
+  item_result: xpath://h2[text()="{}"]
+
+shop_page:
+  add_cart_button: class:add_to_cart_button
+
+cart_page:
+  cart_empty: class:cart-empty
+  coupon_code: id:coupon_code
+  notice_error: class:woocommerce-error
+  remove_item: class:remove

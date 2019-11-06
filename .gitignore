@@ -4,3 +4,6 @@ demos/JavaSeleniumCucumber/target
 demos/JavaSeleniumCucumber/.classpath
 demos/JavaSeleniumCucumber/.project
 demos/JavaSeleniumCucumber/.settings/
+demos/cypress-demo/cypress/videos/
+demos/cypress-demo/node_modules/
+demos/RobotDocker/results/
