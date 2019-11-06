@@ -33,7 +33,11 @@ services:
       - selenoid
       - selenoid-ui
     working_dir: /auto
+    environment:
+      WAIT_FOR_HOSTS: selenoid:4444
     volumes:
+      - ./wait-for.sh:/usr/local/bin/wait-for
+      - ./entrypoint.sh:/usr/local/bin/entrypoint
       - type: bind
         source: .
         target: /auto
