@@ -29,10 +29,14 @@ You need to create a [Security Group](https://console.aws.amazon.com/ec2/v2/home
 
 ## SSH connection example
 ```shell script
+chmod 600 ~/.ssh/id_rsa.pub
 ssh -i "~/.ssh/id_rsa.pub" ubuntu@ec2-34-230-82-216.compute-1.amazonaws.com
 ```
 
 ##### Reference:
-https://www.terraform.io/docs/providers/aws/index.html
-https://learn.hashicorp.com/terraform/getting-started/build.html
-https://github.com/aws-samples/apn-blog/tree/tf_blog_v1.0/terraform_demo
+- https://www.terraform.io/docs/providers/aws/index.html
+- https://learn.hashicorp.com/terraform/getting-started/intro
+- https://github.com/aws-samples/apn-blog/tree/tf_blog_v1.0/terraform_demo
+- https://medium.com/@hmalgewatta/setting-up-an-aws-ec2-instance-with-ssh-access-using-terraform-c336c812322f
+- https://github.com/terraform-providers/terraform-provider-aws/tree/master/examples
+- https://github.com/Cloud-Yeti/aws-labs/tree/master/terraform-aws
