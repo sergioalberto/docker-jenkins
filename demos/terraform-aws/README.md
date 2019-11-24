@@ -3,7 +3,7 @@
 [Terraform](https://www.terraform.io) is a tool made by Hashicorp for building, changing, and versioning infrastructure safely and efficiently.
 Terraform can manage existing and popular service providers ( AWS, Azure, Google Cloud) as well as custom in-house solutions.
 
-## Steps to provision
+## Steps to provision with [AWS](https://console.aws.amazon.com/ec2/home?region=us-east-1)
 ```shell script
 export AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY"
 export AWS_SECRET_ACCESS_KEY="YOUR_SECRET_ACCESS_KEY"
@@ -30,10 +30,11 @@ You need to create a [Security Group](https://console.aws.amazon.com/ec2/v2/home
 ## SSH connection example
 ```shell script
 chmod 600 ~/.ssh/id_rsa.pub
+chmod 600 ~/.ssh/id_rsa
 ssh -i "~/.ssh/id_rsa.pub" ubuntu@ec2-34-230-82-216.compute-1.amazonaws.com
 ```
 
-##### Reference:
+##### References:
 - https://www.terraform.io/docs/providers/aws/index.html
 - https://learn.hashicorp.com/terraform/getting-started/intro
 - https://github.com/aws-samples/apn-blog/tree/tf_blog_v1.0/terraform_demo
