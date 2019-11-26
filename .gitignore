@@ -7,3 +7,8 @@ demos/JavaSeleniumCucumber/.settings/
 demos/cypress-demo/cypress/videos/
 demos/cypress-demo/node_modules/
 demos/RobotDocker/results/
+
+demos/JavaRobot/.classpath
+demos/JavaRobot/.project
+demos/JavaRobot/.settings/
+demos/JavaRobot/target/
